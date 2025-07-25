@@ -1,0 +1,108 @@
+/* WinnerDisplay.css */
+
+.winner-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(145deg, #ffffff, #f2f2f2);
+  border-radius: 15px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.winner-container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.winner-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.winner-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.winner-result {
+  font-size: 18px;
+  background-color: #ecfdf5;
+  padding: 18px;
+  border-radius: 10px;
+  text-align: center;
+  border-left: 6px solid #10b981;
+  animation: bounceIn 0.5s ease;
+  color: #065f46;
+}
+
+.no-winner {
+  font-size: 16px;
+  padding: 15px;
+  text-align: center;
+  color: #6b7280;
+  background-color: #f9fafb;
+  border: 1px dashed #d1d5db;
+  border-radius: 10px;
+}
+
+.emoji {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .winner-container {
+    padding: 20px;
+  }
+
+  .winner-container h2 {
+    font-size: 24px;
+  }
+
+  .winner-input {
+    font-size: 14px;
+  }
+
+  .winner-result {
+    font-size: 16px;
+  }
+}
